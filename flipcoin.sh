@@ -1,8 +1,15 @@
 #!/bin/bash
-flip=$(($RANDOM%2));
-if [ $flip -eq 1 ]
-then
-echo "heads";
+number=1;
+while [ $number -le 11 ]
+do
+if [ number -eq 0 ]
+ echo "head";
+((number++));
+break;
 else
-echo "tails";
+ echo "tail";
+((number++));
+break;
 fi
+done
+
